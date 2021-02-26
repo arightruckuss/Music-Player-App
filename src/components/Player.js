@@ -2,6 +2,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import PlayerDetails from './PlayerDetails';
 import PlayerControls from './PlayerControls';
 
+
 function Player(props) {
     const audioEl = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
@@ -38,21 +39,25 @@ function Player(props) {
         }
     }
 
+    
+
+
     return (
-        <div className="c-player">
+        <div className="c-player" >
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
-            <h4>Playing now</h4>
-            <PlayerDetails song={props.songs[props.currentSongIndex]} />
+            <h4 id="playingText">Paused</h4>
+            <PlayerDetails  song={props.songs[props.currentSongIndex]} />
             <PlayerControls 
                 isPlaying={isPlaying}
                 setIsPlaying={setIsPlaying}
                 SkipSong={SkipSong}
             />
-            <p><strong>Next up:</strong> {props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist} </p>
+            <p><strong>Next up:</strong> {props.songs[props.nextSongIndex].title} </p>
         </div>
     )
 
 }
+
 
 export default Player;
 

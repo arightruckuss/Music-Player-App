@@ -106,7 +106,21 @@ body {
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
   border: none;
   outline: none;
-  background-color: #FFCE00;
+  background-color: rgb(204, 51, 0);
+  color: #FFF;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.c-player--controls .paused-btn {
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8), -4px -4px 10px rgba(255, 255, 255, 0.4), inset -4px -4px 10px rgba(0, 0, 0, 0.4), inset 4px 4px 10px rgba(255, 255, 255, 0.4);
+  border: none;
+  outline: none;
+  background-color: rgb(0, 153, 51);
   color: #FFF;
   font-size: 24px;
   cursor: pointer;
@@ -121,3 +135,10 @@ body {
   font-size: 18px;
 }
 
+#play-btn {
+  display: block;
+}
+
+#paused-btn {
+  display: none;
+}
